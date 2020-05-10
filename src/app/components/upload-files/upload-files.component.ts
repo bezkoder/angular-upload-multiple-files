@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UploadFileService } from 'src/app/services/upload-files.service';
+import { UploadFilesService } from 'src/app/services/upload-files.service';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -16,7 +16,7 @@ export class UploadFilesComponent implements OnInit {
 
   fileInfos: Observable<any>;
 
-  constructor(private uploadService: UploadFileService) { }
+  constructor(private uploadService: UploadFilesService) { }
 
   ngOnInit() {
     this.fileInfos = this.uploadService.getFiles();
